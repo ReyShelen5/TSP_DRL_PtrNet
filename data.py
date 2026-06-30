@@ -17,7 +17,7 @@ class Generator(Dataset):
 
 if __name__ == '__main__':
 	cfg = load_pkl(pkl_parser().path)
-	env = Env_tsp(cfg)
+	env = Env_tsp(cfg,custom_nodes="cities.csv")
 	dataset = Generator(cfg, env)
 	data = next(iter(dataset))
 	print(data.size())
