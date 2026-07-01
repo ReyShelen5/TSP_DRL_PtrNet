@@ -4,7 +4,8 @@ import torch.optim as optim
 import os
 from tqdm import tqdm
 from datetime import datetime
-from actor import PtrNet1 
+from actor import PtrNet1
+from time import time 
 
 def sampling(cfg, env, test_input):
 	test_inputs = test_input.repeat(cfg.batch,1,1)
@@ -65,6 +66,8 @@ def active_search(cfg, env, test_input, log_path=None):
     act_model = act_model.to(device)
 
     baseline = baseline.to(device)
+
+    t1=time()
 
     for i in tqdm(range(cfg.steps)):
 
@@ -158,5 +161,6 @@ def active_search(cfg, env, test_input, log_path=None):
                             '%d,%1.4f,%1.4f\n'
                             % (i, act_loss, l_min)
                         )
-
+    t2=time()
+    print(f"Pure Active Search Time: {t2 - t1:.2f} sec")
     return best_tour

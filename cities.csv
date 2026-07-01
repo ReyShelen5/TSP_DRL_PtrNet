@@ -1,15 +1,106 @@
-Abdon Batista,-27.6126,-51.0233
-Abelardo Luz,-26.5716,-52.3229
-Agrolândia,-27.4087,-49.821999999999996
-Agronômica,-27.2662,-49.708
-Água Doce,-26.9985,-51.5528
-Águas de Chapecó,-27.0754,-52.9808
-Águas Frias,-26.8794,-52.8568
-Águas Mornas,-27.6963,-48.8243
-Belmonte,-26.843000000000004,-53.5758
-Benedito Novo,-26.781,-49.3593
-Biguaçu,-27.496,-48.6598
-Blumenau,-26.9155,-49.0709
-Bocaina do Sul,-27.7455,-49.9423
-Bom Jardim da Serra,-28.3377,-49.6373
-Bom Jesus,-26.7326,-52.3919
+city,x,y
+Bengaluru,12.9716,77.5946
+Mysuru,12.2958,76.6394
+Mangaluru,12.9141,74.8560
+Hubballi,15.3647,75.1240
+Dharwad,15.4589,75.0078
+Belagavi,15.8497,74.4977
+Ballari,15.1394,76.9214
+Shivamogga,13.9299,75.5681
+Davanagere,14.4644,75.9218
+Tumakuru,13.3409,77.1010
+Hassan,13.0072,76.0962
+Mandya,12.5223,76.8958
+Ramanagara,12.7219,77.2810
+Chitradurga,14.2306,76.3980
+Chikkamagaluru,13.3153,75.7754
+Udupi,13.3409,74.7421
+Karwar,14.8136,74.1297
+Raichur,16.2076,77.3463
+Kalaburagi,17.3297,76.8343
+Vijayapura,16.8302,75.7100
+Bagalkote,16.1867,75.6961
+Bidar,17.9133,77.5301
+Koppal,15.3452,76.1548
+Gadag,15.4315,75.6340
+Haveri,14.7935,75.4042
+Yadgir,16.7620,77.1380
+Chamarajanagar,11.9261,76.9400
+Kodagu,12.3375,75.8069
+Madikeri,12.4244,75.7382
+Kolar,13.1377,78.1299
+Chikkaballapur,13.4350,77.7315
+Hosapete,15.2695,76.3871
+Sirsi,14.6197,74.8355
+Bhadravati,13.8485,75.7050
+Ranebennur,14.6229,75.6296
+Gokak,16.1690,74.8239
+Jamkhandi,16.5046,75.2917
+Sindhanur,15.7698,76.7558
+Puttur,12.7598,75.2017
+Sakleshpur,12.9410,75.7842
+Chennai,13.0827,80.2707
+Coimbatore,11.0168,76.9558
+Madurai,9.9252,78.1198
+Tiruchirappalli,10.7905,78.7047
+Salem,11.6643,78.1460
+Erode,11.3410,77.7172
+Tirunelveli,8.7139,77.7567
+Vellore,12.9165,79.1325
+Thoothukudi,8.7642,78.1348
+Dindigul,10.3673,77.9803
+Thanjavur,10.7867,79.1378
+Kanchipuram,12.8342,79.7036
+Karur,10.9601,78.0766
+Namakkal,11.2189,78.1674
+Cuddalore,11.7480,79.7714
+Nagapattinam,10.7656,79.8428
+Villupuram,11.9401,79.4861
+Tiruppur,11.1085,77.3411
+Nagercoil,8.1780,77.4344
+Hosur,12.7409,77.8253
+Hyderabad,17.3850,78.4867
+Warangal,17.9689,79.5941
+Karimnagar,18.4386,79.1288
+Nizamabad,18.6725,78.0941
+Khammam,17.2473,80.1514
+Mahbubnagar,16.7488,77.9850
+Adilabad,19.6728,78.5320
+Suryapet,17.1405,79.6200
+Siddipet,18.1018,78.8520
+Ramagundam,18.7550,79.4740
+Visakhapatnam,17.6868,83.2185
+Vijayawada,16.5062,80.6480
+Guntur,16.3067,80.4365
+Nellore,14.4426,79.9865
+Kurnool,15.8281,78.0373
+Rajahmundry,17.0005,81.8040
+Tirupati,13.6288,79.4192
+Kadapa,14.4673,78.8242
+Anantapur,14.6819,77.6006
+Eluru,16.7107,81.0952
+Kakinada,16.9891,82.2475
+Mumbai,19.0760,72.8777
+Pune,18.5204,73.8567
+Nagpur,21.1458,79.0882
+Nashik,19.9975,73.7898
+Aurangabad,19.8762,75.3433
+Kolhapur,16.7050,74.2433
+Solapur,17.6599,75.9064
+Sangli,16.8524,74.5815
+Satara,17.6805,74.0183
+Ahmednagar,19.0948,74.7480
+Panaji,15.4909,73.8278
+Margao,15.2993,73.9580
+Mapusa,15.5937,73.8087
+Vasco da Gama,15.3959,73.8154
+Kochi,9.9312,76.2673
+Thiruvananthapuram,8.5241,76.9366
+Kozhikode,11.2588,75.7804
+Thrissur,10.5276,76.2144
+Kannur,11.8745,75.3704
+Palakkad,10.7867,76.6548
+Alappuzha,9.4981,76.3388
+Kollam,8.8932,76.6141
+Kottayam,9.5916,76.5222
+Malappuram,11.0732,76.0740

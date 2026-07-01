@@ -3,6 +3,7 @@ from time import time
 from env import Env_tsp
 from config import Config, load_pkl, pkl_parser
 from search import sampling, active_search
+import pandas as pd
 
 
 def search_tour(cfg, env):
@@ -68,29 +69,50 @@ if __name__ == "__main__":
     print("CUSTOM TSP INPUT")
     print("===================================")
 
-    n = int(input("Enter number of cities: "))
+    print("Choose input method:")
+    print("1. Runtime input")
+    print("2. CSV file")
 
-    coords = []
+    choice = input("Enter choice (1/2): ").strip()
 
-    print("\nEnter coordinates as:")
-    print("x y\n")
+    if choice == "1":
 
-    for i in range(n):
-        x, y = map(float, input(f"City {i}: ").split())
-        coords.append([x, y])
+        n = int(input("Enter number of cities: "))
 
-    # Update configuration
-    cfg.city_t = n
+        coords = []
 
-    # Create environment using custom coordinates
-    env = Env_tsp(cfg, custom_nodes=coords)
+        print("\nEnter coordinates as:")
+        print("x y\n")
+
+        for i in range(n):
+            x, y = map(float, input(f"City {i}: ").split())
+            coords.append([x, y])
+
+        cfg.city_t = n
+
+        env = Env_tsp(cfg, custom_nodes=coords)
+
+    elif choice == "2":
+
+        csv_path = input("Enter CSV file path: ").strip()
+
+        df = pd.read_csv(csv_path)
+
+        cfg.city_t = len(df)
+
+        env = Env_tsp(cfg, custom_nodes=csv_path)
+
+        print(f"\nLoaded {cfg.city_t} cities from {csv_path}")
+
+    else:
+        raise ValueError("Invalid choice.")
 
     print("\n===================================")
     print("ENTERED COORDINATES")
     print("===================================")
 
-    for i, (x, y) in enumerate(coords):
-        print(f"City {i:2d}: ({x:.4f}, {y:.4f})")
+    for i, row in df.iterrows():
+        print(f"City {i:2d}: ({row['x']:.4f}, {row['y']:.4f})")
 
     if cfg.mode == "test":
         search_tour(cfg, env)

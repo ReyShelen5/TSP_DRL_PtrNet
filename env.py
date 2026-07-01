@@ -195,8 +195,22 @@ class Env_tsp():
                 f"({x:.4f}, {y:.4f})"
             )
 
+        # Show return to starting city
+        first = tour[0]
+        x = real_nodes[first,0].item()
+        y = real_nodes[first,1].item()
+
+        print(
+            f"Step {len(tour)+1:2d} -> "
+            f"City {first.item():2d} "
+            f"({x:.4f}, {y:.4f}) [Return]"
+        )
+
+
         print("\nTour Sequence:")
-        print(" -> ".join(str(c.item()) for c in tour))
+        tour_sequence = [str(c.item()) for c in tour]
+        tour_sequence.append(str(tour[0].item()))
+        print(" -> ".join(tour_sequence))
 
         plt.figure(figsize=(8,8))
         plt.plot(real_nodes[:,0], real_nodes[:,1], 'yo', markersize=10)
