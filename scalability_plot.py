@@ -4,19 +4,19 @@ import matplotlib.pyplot as plt
 import torch
 import torch.optim as optim
 
-from TSP_DRL_PtrNet.config import Config
-from TSP_DRL_PtrNet.env import Env_tsp
-from TSP_DRL_PtrNet.search import (
+from config import Config
+from env import Env_tsp
+from search_defined_rt import (
     sampling_benchmark,
     active_search_benchmark
 )
-from TSP_DRL_PtrNet.actor import PtrNet1
+from actor import PtrNet1
 
 # -----------------------------------------------------
 # SETTINGS
 # -----------------------------------------------------
 
-MODEL_PATH = "./TSP_DRL_PtrNet/Pt/train20_1113_12_12_step14999_act.pt"
+MODEL_PATH = "./Pt/train15_0629_13_10_step9999_act.pt"
 
 BATCH = 512
 EMBED = 128
