@@ -103,14 +103,14 @@ active_plot = []
 print("=" * 60)
 print("RL SCALABILITY BENCHMARK")
 print("=" * 60)
-
+csv_file = "cities.csv"
 for n in range(10, 101, 10):
 
     print(f"\nTesting {n} Cities")
 
     cfg.city_t = n
 
-    env = Env_tsp(cfg)
+    env = Env_tsp(cfg,custom_nodes=csv_file)
 
     sampling_times = []
     active_times = []
