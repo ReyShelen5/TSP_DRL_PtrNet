@@ -161,4 +161,4 @@ def active_search_benchmark(cfg, env, test_input,act_model,act_optim, log_path =
 				else:
 					with open(log_path, 'a') as f:
 						f.write('%d,%1.4f,%1.4f\n'%(i, act_loss, l_min))
-	return best_tour
+	return best_tour,l_

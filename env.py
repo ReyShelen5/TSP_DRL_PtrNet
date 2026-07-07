@@ -65,16 +65,17 @@ class Env_tsp():
     def load_real_coordinates(self, csv_path):
         df = pd.read_csv(csv_path)
 
+        if len(df) < self.city_t:
+            raise ValueError(
+                f"CSV contains only {len(df)} cities, "
+                f"but {self.city_t} are required."
+            )
+
         coords = torch.tensor(
-            df[['x', 'y']].values,
+            df.iloc[:self.city_t][["x", "y"]].values,
             dtype=torch.float32,
             device=self.device
         )
-
-        if coords.shape[0] != self.city_t:
-            raise ValueError(
-                f"CSV contains {coords.shape[0]} cities, expected {self.city_t}"
-            )
 
         return coords
 

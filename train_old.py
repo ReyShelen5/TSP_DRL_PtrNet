@@ -107,32 +107,20 @@ def train_model(cfg, env, log_path = None):
 					else:
 						with open(log_path, 'a') as f:
 							f.write('%d,%1.4f,%1.4f,%dmin%dsec\n'%(i, ave_act_loss/(i+1), ave_L/(i+1), (t2-t1)//60, (t2-t1)%60))
-			if(ave_L/(i+1) < min_L):
-				min_L = ave_L/(i+1)
-				
+			# --- Update this block in train.py ---
+			if (ave_L / (i + 1) < min_L):
+				min_L = ave_L / (i + 1)
+				cnt = 0  # Reset counter when a new best is found
 			else:
 				cnt += 1
-				print(f'cnt: {cnt}/20')
-				if(cnt >= 20):
+				print(f'cnt: {cnt}/100')  # Give it more breathing room
+				if (cnt >= 100):          # Increased threshold from 20 to 100
 					print('early stop, average cost cant decrease anymore')
 					if log_path is not None:
 						with open(log_path, 'a') as f:
 							f.write('\nearly stop')
 					break
 			t1 = time()
-		# Save best model whenever the average tour length improves
-		if (ave_L/(i+1) < min_L):
-			min_L = ave_L/(i+1)
-			if cfg.issaver:
-				torch.save(act_model.state_dict(), cfg.model_dir + "best_model.pt")
-				print("Best model saved.")
-
-		# Save checkpoint every 10,000 steps
-		if cfg.issaver and (i + 1) % 10000 == 0:
-			checkpoint_path = cfg.model_dir + f"{cfg.task}_{date}_step{i+1}_act.pt"
-			torch.save(act_model.state_dict(), checkpoint_path)
-			print(f"Checkpoint saved: {checkpoint_path}")
-
 	if cfg.issaver:		
 		torch.save(act_model.state_dict(), cfg.model_dir + '%s_%s_step%d_act.pt'%(cfg.task, date, i))#'cfg.model_dir = ./Pt/'
 		print('save model...')
